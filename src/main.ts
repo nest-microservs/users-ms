@@ -28,5 +28,8 @@ async function bootstrap() {
 
   await app.listen();
   logger.log(`Users-MS is running on port ${envs.port}`);
+  logger.log(`DB_HOST: ${envs.dbHost}`);
+  logger.log(`DB_PORT: ${envs.dbPort}`);
+  logger.log(`DB_USER: ${envs.dbUser}@${envs.dbName}`);
 }
 bootstrap();
