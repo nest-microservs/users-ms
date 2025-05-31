@@ -12,6 +12,10 @@ export class UsersService {
     private readonly userRepository: Repository<User>,
   ) {}
 
+  // Crear las migraciones para TYPEORM
+  // npx typeorm migration:generate -d src/migrations/ -p src/migrations/ -n CreateUsersTable
+  // npx typeorm migration:run -d src/migrations/ -p src/migrations/ -n CreateUsersTable
+
   create(createUserDto: CreateUserDto) {
     return 'This action adds a new user';
   }

@@ -3,11 +3,11 @@ services:
     image: postgres:17.2
     container_name: user-ms-db
     environment:
-      - POSTGRES_USER=postgresUserMs
-      - POSTGRES_PASSWORD=postgresUserMs
-      - POSTGRES_DB=user-ms-db
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     ports:
-      - 5432:5432
+      - ${DB_PORT}:5432
     volumes:
       - user-ms-db:/var/lib/postgresql/data
 
